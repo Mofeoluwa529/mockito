@@ -508,15 +508,15 @@ public class BDDMockito extends Mockito {
      * @since 2.1.0
      */
     @SuppressWarnings({"unchecked", "varargs"})
-    // public static BDDStubber willReturn(Object toBeReturned, Object... toBeReturnedNext) {
-    //     return new BDDStubberImpl(Mockito.doReturn(toBeReturned, toBeReturnedNext));
-    // }
+    public static BDDStubber willReturn(Object toBeReturned, Object... toBeReturnedNext) {
+        return new BDDStubberImpl(Mockito.doReturn(toBeReturned, toBeReturnedNext));
+    }
 
-    // /**
-    //  * see original {@link Mockito#doCallRealMethod()}
-    //  * @since 1.8.0
-    //  */
-    // public static BDDStubber willCallRealMethod() {
-    //     return new BDDStubberImpl(Mockito.doCallRealMethod());
-    // }
+    /**
+     * see original {@link Mockito#doCallRealMethod()}
+     * @since 1.8.0
+     */
+    public static BDDStubber willCallRealMethod() {
+        return new BDDStubberImpl(Mockito.doCallRealMethod());
+    }
 }
